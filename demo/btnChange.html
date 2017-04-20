@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			height: 100px;
+			width: 100px;
+			background: #000;
+		}
+	</style>
+</head>
+<body>
+	<button>变宽</button>
+	<button>变高</button>
+	<button>变色</button>
+	<button>隐藏</button>
+	<button>重置</button>
+	<div id="box"></div>
+<script>
+		 /*var str="adc";
+		 String.prototype.repeatIfy = function(x) {
+		 	var str="",str1="";
+		 	for (var i = 0; i < this.length; i++) {
+		 		str+=this[i];
+		 	}
+		 	if(x>0){
+		 		for (var j = 0; j < x; j++) {
+		 		str1+=str
+		 		}
+		 	}
+		 	
+			return str1
+		 };
+		 console.log(str.repeatIfy(2));*/
+		 	/*function changeStyle(ele,attr,val){
+				ele.style[attr]=val
+			}
+			var btn=document.getElementsByTagName('button'),
+				box=document.getElementById('box'),
+				arr=["width","height","background","display","display"],
+				arr1=["200px","200px","#0ff","none","block"];
+			for(var i=0; i<btn.length; i++){
+				btn[i].index=i;
+				btn[i].onclick=function(){
+					console.log(this.index)
+					this.index==btn.length-1&&(box.style.cssText="")
+					changeStyle(box,arr[this.index],arr1[this.index])
+				}
+			}*/
+
+/*var changeStyle = function (elem, attr, value)
+{
+	elem.style[attr] = value
+};
+window.onload = function ()
+{
+	var oBtn = document.getElementsByTagName("button");
+	var oDiv = document.getElementById("box");
+	var oAtt = ["width","height","background","display","display"];
+	var oVal = ["200px","200px","red","none","block"];
+
+	for (var i = 0; i < oBtn.length; i++)
+	{
+		oBtn[i].index = i;
+		oBtn[i].onclick = function ()
+		{
+			this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+			changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+		}	
+	}
+};*/
+
+</script>
+</body>
+</html>
