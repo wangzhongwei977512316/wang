@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<label for="">
+		<input type="text" id="arrs" value="1,2,3,4,5,6,7,8,9,10"><span id="tishi" style="display:none">输入数字之和，数字之间用半角","号分割</span>
+	</label>
+	<br><button id="add">求和</button>
+	<span id="total" style="color:red"></span>
+	<script>
+	function reduces(arr){
+		var num=0;
+		for (var i = 0; i < arr.length; i++) {
+			console.log(arr[i],num)
+			num+=arr[i]*1
+		};
+		return num;
+	}
+	var text=document.getElementById('arrs');
+	var btn=document.getElementById('add');
+	var tishi=document.getElementById('tishi');
+	var total=document.getElementById('total');
+		btn.onclick=function(){
+			var arr=text.value.split(',');
+			var num=reduces(arr);
+			total.innerHTML=num;
+		}
+		text.onfocus=function(){
+			tishi.style.display="inline-block";	
+		}
+	</script>
+</body>
+</html>
