@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{list-style: none;float: left;}
+		ul{
+			height: 30px;
+		}
+		ul li{
+			width: 100px;
+			text-align: center;
+			line-height: 30px;
+		}
+		#box{
+			height: 100px;
+			width: 300px;
+			background: green;
+		}
+	.on{
+		background: #ff0
+	}
+	</style>
+</head>
+<body>
+	<ul id="uls">
+		<li class="on">one</li>
+		<li>two</li>
+		<li>three</li>
+	</ul>
+	<div id="box">
+		<div>11111111</div>
+		<div>22222222</div>
+		<div>33333333</div>
+	</div>
+	<script>
+		var uls=document.getElementById('uls');
+		var lis=uls.getElementsByTagName('li');
+		var box=document.getElementById('box');
+		var boxs=box.getElementsByTagName('div');
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].index=i;
+			lis[i].onclick=function(){
+				for (var j = 0; j < lis.length; j++) {
+					lis[j].className="";
+					boxs[j].style.display="none";
+				};
+				this.className="on";
+				boxs[this.index].style.display="block";
+			}
+		};
+	</script>
+</body>
+</html>
